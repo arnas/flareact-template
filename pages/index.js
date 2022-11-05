@@ -1,7 +1,19 @@
-export default function Index() {
+
+export async function getEdgeProps() {
+  const posts = {data:"abc"};
+
+  return {
+    props: {
+      posts,
+    },
+  };
+}
+
+
+export default function Index(props) {
   return (
     <h1>
-      You're running React on the Edge!
+      {props.posts}
     </h1>
   );
 }
